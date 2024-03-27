@@ -9,13 +9,15 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
     return Container(
       decoration: const BoxDecoration(
         color: blackColor,
         borderRadius: BorderRadius.only(topRight: Radius.circular(70)),
       ),
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: size.height * 0.1,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -30,8 +32,8 @@ class ButtonWidget extends StatelessWidget {
               ),
               elevation: 0,
               minimumSize: Size(
-                MediaQuery.of(context).size.width * 0.8,
-                MediaQuery.of(context).size.height * 0.05,
+                size.width * 0.8,
+                size.height * 0.05,
               ),
             ),
             onPressed: () {},

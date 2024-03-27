@@ -8,10 +8,11 @@ class ImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.302,
+          height: size.height * 0.302,
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -22,12 +23,16 @@ class ImageWidget extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 30, left: 30, right: 22),
+          padding: EdgeInsets.only(
+            top: size.height * 0.035,
+            left: size.width * 0.08,
+            right: size.width * 0.05,
+          ),
           child: Row(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.054,
-                width: MediaQuery.of(context).size.width * 0.11,
+                height: size.height * 0.054,
+                width: size.width * 0.11,
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.23),
                   borderRadius: BorderRadius.circular(13),

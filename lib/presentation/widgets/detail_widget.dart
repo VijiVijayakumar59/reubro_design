@@ -12,9 +12,11 @@ class DetailWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
     return Container(
-      height: MediaQuery.of(context).size.height * 0.538,
-      width: MediaQuery.of(context).size.width * 1,
+      height: size.height * 0.538,
+      width: size.width * 1,
       decoration: const BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.only(
@@ -156,8 +158,8 @@ class DetailWidget extends StatelessWidget {
                   ),
                   elevation: 0,
                   minimumSize: Size(
-                    MediaQuery.of(context).size.width * 0.8,
-                    MediaQuery.of(context).size.height * 0.05,
+                    size.width * 0.8,
+                    size.height * 0.05,
                   ),
                 ),
                 onPressed: () {},

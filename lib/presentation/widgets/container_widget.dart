@@ -15,9 +15,10 @@ class ContainerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
-      height: MediaQuery.of(context).size.height * 0.068,
-      width: MediaQuery.of(context).size.width * 0.15,
+      height: size.height * 0.068,
+      width: size.width * 0.15,
       decoration: BoxDecoration(
         color: color,
         border: Border.all(
