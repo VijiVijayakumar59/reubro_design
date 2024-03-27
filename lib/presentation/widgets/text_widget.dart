@@ -18,10 +18,11 @@ class TextWidget extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-          color: textColor,
-          fontWeight: fontWeight,
-          fontSize: fontSize,
-          wordSpacing: 1),
+        color: textColor,
+        fontWeight: fontWeight,
+        fontSize: fontSize,
+        wordSpacing: 1,
+      ),
     );
   }
 }
